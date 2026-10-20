@@ -1,0 +1,9 @@
+/* Esconde os documentos inativos */
+.doc-content.hidden {
+    display: none;
+}
+
+/* Exibe o documento ativo */
+.doc-content.active {
+    display: block;
+}
