@@ -7,3 +7,34 @@
 .doc-content.active {
     display: block;
 }
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    padding: 20px;
+    margin-left: 250px;
+    text-align: justify;
+}
+
+.aside {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 1px solid #007bff;
+}
