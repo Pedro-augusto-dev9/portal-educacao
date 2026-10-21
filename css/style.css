@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,15 +13,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-height: 220px;
+    min-height: 120px;
     background: #efefef;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 20px 40px 10px;
-    box-sizing: border-box;
+    padding: 10px 40px;
 }
 
 .brand-wrap {
-    width: 220px;
+    width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,58 +28,206 @@ body {
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 510px;
+    height: 310px;
+    /*border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #1d1d1d;
+    border: 3px solid #1d1d1d;
     background: #111;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);*/
     display: block;
 }
 
 .header h1 {
-    margin: 0;
     flex: 1;
+    margin: 0;
     text-align: center;
     font-size: clamp(2.2rem, 4vw, 4rem);
     font-weight: 700;
+    line-height: 1.1;
     letter-spacing: -0.04em;
     font-family: "Georgia", "Times New Roman", serif;
     color: #111;
 }
 
-/* Esconde os documentos inativos */
-.doc-content.hidden {
-    display: none;
+.layout {
+    display: flex;
+    min-height: 65vh;
 }
 
-/* Exibe o documento ativo */
+.sidebar {
+    width: 300px;
+    background: #f7f7f7;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 26px 16px;
+}
+
+.sidebar h3 {
+    margin: 0 0 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*estilo de botões do menu lateral*/
+.doc-link {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 10px 8px;
+    border-left: 3px solid transparent;
+    border-radius: 6px;
+    display: block;
+    transition: 0.2s ease;
+}
+/* aqui inicia o sistema de mudança no main */
+.doc-link:hover,
+.doc-link.active {
+    background: rgba(11, 94, 215, 0.08);
+    border-left-color: #0b5ed7;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px 28px;
+    background: #f3f3f3;
+}
+
+.doc-content {
+    display: none;
+    min-height: 360px;
+}
+
 .doc-content.active {
     display: block;
 }
 
+.doc-content.hidden {
+    display: none;
+}
+/* aqui finaliza o sistema de mudança no main */
+.document-sheet {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 30px 26px;
+    min-height: 350px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+.document-sheet h2 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 2.3vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+.document-sheet h3 {
+    margin: 0 0 18px;
+    font-size: 1.3rem;
+}
+
+.document-sheet p {
+    margin: 0 0 14px;
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.document-sheet img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 14px auto;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.formula {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.quiz-sheet {
+    max-width: 900px;
+}
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quiz-question {
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.4);
+}
+
+.quiz-question h4 {
+    margin: 0 0 12px;
+    font-size: 1.05rem;
+}
+
+.quiz-question label {
+    display: block;
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.quiz-question input {
+    margin-right: 8px;
+}
+
+#btn-verificar {
+    margin-top: 18px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.quiz-result {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d5b9d;
+}
+
 .footer {
     background-color: #f1f1f1;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     padding: 20px;
     text-align: center;
 }
 
-.main-content {
-    padding: 20px;
-    margin-left: 250px;
-    text-align: justify;
-}
+@media (max-width: 820px) {
+    .layout {
+        flex-direction: column;
+    }
 
-.aside {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: justify;
-}
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    border-bottom: 1px solid #007bff;
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+
+    .brand-wrap {
+        margin-right: 0;
+    }
 }
