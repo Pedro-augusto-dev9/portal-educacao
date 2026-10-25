@@ -23,11 +23,11 @@
             
             <h3>Documentos / Módulos</h3>
             <nav class="side-nav" id="side-nav">
-                <div id="doc-container">
+                <!---<div id="doc-container">
                     <p class="nav-title" style="margin-left: 15px; margin-bottom: 10px; font-weight: bold;">Seleção de Arquivo</p>
                     <label for="wordFile" class="input-label">Escolher Arquivo:</label>
                     <input type="file" id="wordFile" accept=".doc, .docx" class="file-input">
-                </div>
+                </div>--->
                 <p class="nav-title">1. Componentes Passivos Básicos</p>
                 <a href="#" class="doc-link active" data-doc="doc-resistores">1.1 Resistores e a Lei de Ohm</a>
                 <a href="#" class="doc-link" data-doc="doc-capacitores">1.2 Capacitores e Armazenamento de Energia</a>
@@ -39,12 +39,14 @@
                 <p class="nav-title">3. Grandezas, Sinais e Circuitos Elétricos</p>
                 <a href="#" class="doc-link" data-doc="doc-lkc">3.1 Leis de Kirchhoff (LKC e LKV)</a>
                 <a href="#" class="doc-link" data-doc="doc-potencia">3.2 Potência Elétrica e Efeito Joule</a>
-                <a href="#" class="doc-link" data-doc="doc-quiz">3.3 Quiz Kirchhoff</a>
 
                 <p class="nav-title">4. Aplicações Práticas dos Componentes</p>
                 <a href="#" class="doc-link" data-doc="doc-filtros">4.1 Circuitos de Filtros Passivos (RC e RL)</a>
                 <a href="#" class="doc-link" data-doc="doc-fontes">4.2 Fontes de Alimentação Lineares</a>
                 <a href="#" class="doc-link" data-doc="doc-temporizacao">4.3 Circuitos de Temporização (RC)</a>
+
+                <p class="nav-title">5. Quiz</p>
+                <a href="#" class="doc-link" data-doc="doc-quiz">3.3 Quiz Kirchhoff</a>
             </nav>
         </aside>
 
@@ -54,19 +56,13 @@
             <article id="doc-resistores" class="doc-content active">
                 <div class="document">
                     <h2>1.1 Resistores e a Lei de Ohm</h2>
-                    <p>Os <strong>resistores</strong> são componentes eletrónicos passivos cuja principal função é limitar a passagem de corrente elétrica num circuito, convertendo parte da energia elétrica em calor.</p>
-                    
-                    <p>A <strong>Lei de Ohm</strong> estabelece que a corrente elétrica (I) que flui por um condutor é diretamente proporcional à tensão (V) aplicada nos seus terminais e inversamente proporcional à sua resistência (R):</p>
-
-                    <p class="formula">V = R × I</p>
-
-                    <p><strong>Onde:</strong></p>
-                    <ul>
-                        <li><strong>V:</strong> Tensão elétrica (Volts - V)</li>
-                        <li><strong>R:</strong> Resistência elétrica (Ohms - Ω)</li>
-                        <li><strong>I:</strong> Corrente elétrica (Ampères - A)</li>
-                    </ul>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-resistores">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-resistores" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 1.2 CAPACITORES E ARMAZENAMENTO DE ENERGIA -->
@@ -81,6 +77,12 @@
 
                     <p>As suas principais aplicações em circuitos eletrónicos incluem a filtragem de ruídos, acoplamento/desacoplamento de sinais e temporização.</p>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-capacitores">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-capacitores" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 1.3 INDUTORES E ELETROMAGNETISMO -->
@@ -95,6 +97,12 @@
 
                     <p>A sua unidade de medida é o <strong>Henry (H)</strong>. São amplamente empregues em filtros de radiofrequência, transformadores e fontes comutadas.</p>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-indutores">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-indutores" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 2.1 DIODOS E RETIFICAÇÃO -->
@@ -109,6 +117,12 @@
                         <li><strong>Onda Completa:</strong> Utiliza uma ponte de diodos (4 diodos) para aproveitar ambos os semiciclos da onda, resultando numa corrente contínua mais estável.</li>
                     </ul>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-diodos">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-diodos" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 3.1 LEIS DE KIRCHHOFF -->
@@ -131,6 +145,12 @@
                         <img src="assets/leikirchhoffexemplo1.webp" alt="Exemplo da Lei de Kirchhoff">
                     </div>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-lkc">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-lkc" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 3.2 POTÊNCIA ELÉTRICA E EFEITO JOULE -->
@@ -145,6 +165,12 @@
 
                     <p class="formula">P = R × I²</p>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-potencia">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-potencia" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 3.3 QUIZ INTERATIVO -->
@@ -156,6 +182,12 @@
                     <button id="btn-verificar" type="button">Verificar respostas</button>
                     <p id="quiz-resultado" class="quiz-result"></p>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-quiz">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-quiz" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 4.1 FILTROS PASSIVOS -->
@@ -168,6 +200,12 @@
                         <li><strong>Passa-Altas:</strong> Bloqueia sinais contínuos e frequências baixas, deixando passar apenas frequências superiores à frequência de corte.</li>
                     </ul>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-filtros">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-filtros" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 4.2 FONTES DE ALIMENTAÇÃO -->
@@ -183,6 +221,12 @@
                         <li><strong>Regulação:</strong> Mantém a tensão constante na saída.</li>
                     </ol>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-fontes">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-fontes" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
             <!-- 4.3 TEMPORIZAÇÃO (RC) -->
@@ -195,6 +239,12 @@
 
                     <p>Um capacitor demora cerca de <strong>5τ</strong> para atingir a sua carga ou descarga completa (aprox. 99,3%). Esse princípio é largamente utilizado na criação de temporizadores e geradores de pulso.</p>
                 </div>
+                <section class="html-upload">
+                    <p class="nav-title">Adicionar documento HTML</p>
+                    <label class="input-label" for="arquivo-temporizacao">Escolher arquivo (.html ou .htm):</label>
+                    <input class="file-input html-file-input" type="file" id="arquivo-temporizacao" accept=".html,.htm,text/html">
+                    <div class="html-preview"></div>
+                </section>
             </article>
 
         </main>
