@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 120px;
-    background: #efefef;
+    background: #232323;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     padding: 10px 40px;
 }
@@ -42,7 +42,7 @@ body {
     line-height: 1.1;
     letter-spacing: -0.04em;
     font-family: "Georgia", "Times New Roman", serif;
-    color: #111;
+    color: #dddddd;
 }
 
 .layout {
@@ -59,7 +59,7 @@ body {
 
 .sidebar h3 {
     margin: 0 0 18px;
-    font-size: 1.1rem;
+    /*tamanho do texto do menu lateral*/
     font-weight: 700;
 }
 
@@ -72,9 +72,8 @@ body {
 .doc-link {
     color: #0b5ed7;
     text-decoration: none;
-    font-size: 1.05rem;
+    font-size: 1rem;
     padding: 10px 8px;
-    border-left: 3px solid transparent;
     border-radius: 6px;
     display: block;
     transition: 0.2s ease;
@@ -83,7 +82,7 @@ body {
 .doc-link:hover,
 .doc-link.active {
     background: rgba(11, 94, 215, 0.08);
-    border-left-color: #0b5ed7;
+    transform: scale(1.02);
 }
 
 .main-content {
@@ -105,7 +104,7 @@ body {
     display: none;
 }
 /* aqui finaliza o sistema de mudança no main */
-.document-sheet {
+.document {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 30px 26px;
@@ -113,25 +112,25 @@ body {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02);
 }
 
-.document-sheet h2 {
+.document h2 {
     margin: 0 0 16px;
     font-size: clamp(2rem, 2.3vw, 3rem);
     line-height: 1.2;
     letter-spacing: -0.04em;
 }
 
-.document-sheet h3 {
+.document h3 {
     margin: 0 0 18px;
     font-size: 1.3rem;
 }
 
-.document-sheet p {
+.document p {
     margin: 0 0 14px;
     font-size: 1.02rem;
     line-height: 1.7;
 }
 
-.document-sheet img {
+.document img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -222,7 +221,34 @@ body {
         padding-bottom: 20px;
     }
 
-    .brand-wrap {
+    .brand {
         margin-right: 0;
     }
 }
+
+    #doc-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .display {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .input-label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        margin-left: 25px;
+    }
+    
+    .file-input {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+    }
