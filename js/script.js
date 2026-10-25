@@ -88,29 +88,40 @@ verifyButton.addEventListener('click', () => {
   resultText.style.color = hits >= 2 ? '#0a7a3a' : '#a11313';
 });
 
-document.getElementById('wordFile').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            
-            if (!file) return;
+document.querySelectorAll('.html-file-input').forEach((fileInput) => {
+  const uploadSection = fileInput.closest('.html-upload');
+  const previewContainer = uploadSection.querySelector('.html-preview');
 
-            const container = document.getElementById('doc-container');
-            
-            // Avisa o usuário que está carregando
-            container.innerHTML = '<p style="text-align: center;">Carregando documento...</p>';
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (!file) return;
 
-            // Lendo o arquivo enviado como ArrayBuffer
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const arrayBuffer = e.target.result;
+    if (!/\.html?$/i.test(file.name)) {
+      previewContainer.textContent = 'Selecione um arquivo .html ou .htm.';
+      fileInput.value = '';
+      return;
+    }
 
-                // Renderiza o arquivo Word dentro do container
-                docx.renderAsync(arrayBuffer, container)
-                    .then(x => console.log("Documento renderizado com sucesso!"))
-                    .catch(err => {
-                        console.error(err);
-                        container.innerHTML = '<p style="color: red; text-align: center;">Erro ao abrir o documento.</p>';
-                    });
-            };
-            
-            reader.readAsArrayBuffer(file);
-        });
+    previewContainer.textContent = 'Carregando documento...';
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result !== 'string') {
+        previewContainer.textContent = 'Não foi possível ler o arquivo HTML.';
+        return;
+      }
+
+      const preview = document.createElement('iframe');
+      preview.title = `Pré-visualização de ${file.name}`;
+      preview.setAttribute('sandbox', '');
+      preview.srcdoc = reader.result;
+      previewContainer.replaceChildren(preview);
+    };
+
+    reader.onerror = () => {
+      previewContainer.textContent = 'Erro ao abrir o documento.';
+    };
+
+    reader.readAsText(file);
+  });
+});
