@@ -6,30 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Educação</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com"></script>
-    <script src="https://unpkg.com"></script>
 </head>
-<body>
-    <header class="header">
-        <div class="brand">
-            <img src="assets/seumadruga3.png" alt="Logo do Portal Educação" class="logo">
+<body class="page">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-logo" href="index.html" aria-label="Portal Educação">
+                <img src="assets/seumadruga3.png" alt="" width="64" height="64">
+            </a>
+            <h1>Portal Educação</h1>
         </div>
-        <h1>Portal Educação</h1>
     </header>
 
-    <div class="layout">
-        <!-- MENU LATERAL -->
-        <aside class="sidebar">
-            
+    <div class="container grid">
+        <aside class="col-4 card">
             <h3>Documentos / Módulos</h3>
-            <nav class="side-nav" id="side-nav">
-                <!---<div id="doc-container">
-                    <p class="nav-title" style="margin-left: 15px; margin-bottom: 10px; font-weight: bold;">Seleção de Arquivo</p>
-                    <label for="wordFile" class="input-label">Escolher Arquivo:</label>
-                    <input type="file" id="wordFile" accept=".doc, .docx" class="file-input">
-                </div>--->
+            <nav class="site-nav" id="side-nav" aria-label="Módulos">
                 <p class="nav-title">1. Componentes Passivos Básicos</p>
-                <a href="#" class="doc-link active" data-doc="doc-resistores">1.1 Resistores e a Lei de Ohm</a>
+                <a href="#" class="doc-link active" data-doc="doc-resistores" aria-current="page">1.1 Resistores e a Lei de Ohm</a>
                 <a href="#" class="doc-link" data-doc="doc-capacitores">1.2 Capacitores e Armazenamento de Energia</a>
                 <a href="#" class="doc-link" data-doc="doc-indutores">1.3 Indutores e Eletromagnetismo</a>
 
@@ -50,24 +43,23 @@
             </nav>
         </aside>
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <main class="main-content">
+        <main class="main-content col-8">
             <!-- 1.1 RESISTORES E LEI DE OHM -->
             <article id="doc-resistores" class="doc-content active">
-                <div class="document">
+                <div class="document card">
                     <h2>1.1 Resistores e a Lei de Ohm</h2>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-resistores">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-resistores" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-resistores">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-resistores" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 1.2 CAPACITORES E ARMAZENAMENTO DE ENERGIA -->
             <article id="doc-capacitores" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>1.2 Capacitores e Armazenamento de Energia</h2>
                     <p>O <strong>capacitor</strong> é um componente constituído por duas placas condutoras separadas por um material isolante (dielétrico). Armazena energia sob a forma de um <strong>campo elétrico</strong>.</p>
                     
@@ -77,17 +69,17 @@
 
                     <p>As suas principais aplicações em circuitos eletrónicos incluem a filtragem de ruídos, acoplamento/desacoplamento de sinais e temporização.</p>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-capacitores">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-capacitores" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-capacitores">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-capacitores" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 1.3 INDUTORES E ELETROMAGNETISMO -->
             <article id="doc-indutores" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>1.3 Indutores e Eletromagnetismo</h2>
                     <p>O <strong>indutor</strong> é um componente formado por um fio condutor enrolado em forma de bobina. Quando uma corrente elétrica passa por ele, cria um <strong>campo magnético</strong> que armazena energia.</p>
                     
@@ -97,17 +89,17 @@
 
                     <p>A sua unidade de medida é o <strong>Henry (H)</strong>. São amplamente empregues em filtros de radiofrequência, transformadores e fontes comutadas.</p>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-indutores">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-indutores" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-indutores">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-indutores" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 2.1 DIODOS E RETIFICAÇÃO -->
             <article id="doc-diodos" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>2.1 Diodos e Retificação</h2>
                     <p>O <strong>diodo semicondutor</strong> é um componente eletrónico construído a partir da junção de materiais tipo P e tipo N (junção PN). Funciona como uma válvula de sentido único para a corrente elétrica.</p>
                     
@@ -117,17 +109,17 @@
                         <li><strong>Onda Completa:</strong> Utiliza uma ponte de diodos (4 diodos) para aproveitar ambos os semiciclos da onda, resultando numa corrente contínua mais estável.</li>
                     </ul>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-diodos">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-diodos" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-diodos">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-diodos" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 3.1 LEIS DE KIRCHHOFF -->
             <article id="doc-lkc" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>3.1 Leis de Kirchhoff</h2>
                     <p><strong>Introdução:</strong> As Leis de Kirchhoff são pilares fundamentais da eletroeletrónica e da engenharia elétrica. Desenvolvidas pelo físico alemão Gustav Robert Kirchhoff em 1845, estas regras permitem analisar e resolver circuitos complexos.</p>
 
@@ -145,17 +137,17 @@
                         <img src="assets/leikirchhoffexemplo1.webp" alt="Exemplo da Lei de Kirchhoff">
                     </div>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-lkc">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-lkc" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-lkc">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-lkc" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 3.2 POTÊNCIA ELÉTRICA E EFEITO JOULE -->
             <article id="doc-potencia" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>3.2 Potência Elétrica e Efeito Joule</h2>
                     <p>A <strong>Potência Elétrica</strong> mede a quantidade de energia convertida por unidade de tempo no circuito (expressa em Watts - W).</p>
 
@@ -165,34 +157,34 @@
 
                     <p class="formula">P = R × I²</p>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-potencia">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-potencia" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-potencia">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-potencia" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 3.3 QUIZ INTERATIVO -->
             <article id="doc-quiz" class="doc-content hidden">
-                <div class="document quiz-sheet">
+                <div class="document quiz-sheet card">
                     <h2>3.3 Quiz Interativo</h2>
                     <p>Teste os seus conhecimentos sobre as leis de circuitos e componentes eletrónicos abaixo:</p>
                     <div id="quiz"></div>
-                    <button id="btn-verificar" type="button">Verificar respostas</button>
+                    <button id="btn-verificar" class="button" type="button">Verificar respostas</button>
                     <p id="quiz-resultado" class="quiz-result"></p>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-quiz">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-quiz" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-quiz">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-quiz" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 4.1 FILTROS PASSIVOS -->
             <article id="doc-filtros" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>4.1 Circuitos de Filtros Passivos (RC e RL)</h2>
                     <p>Filtros passivos utilizam combinações de resistores, capacitores (RC) ou indutores (RL) para selecionar ou atenuar frequências de um sinal elétrico.</p>
                     <ul>
@@ -200,17 +192,17 @@
                         <li><strong>Passa-Altas:</strong> Bloqueia sinais contínuos e frequências baixas, deixando passar apenas frequências superiores à frequência de corte.</li>
                     </ul>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-filtros">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-filtros" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-filtros">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-filtros" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 4.2 FONTES DE ALIMENTAÇÃO -->
             <article id="doc-fontes" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>4.2 Fontes de Alimentação Lineares</h2>
                     <p>As fontes de alimentação lineares convertem a tensão alternada da rede elétrica (ex: 127V/220V CA) numa tensão contínua estável (ex: 5V ou 12V CC) para alimentar circuitos eletrónicos.</p>
                     <p><strong>Etapas fundamentais:</strong></p>
@@ -221,17 +213,17 @@
                         <li><strong>Regulação:</strong> Mantém a tensão constante na saída.</li>
                     </ol>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-fontes">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-fontes" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-fontes">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-fontes" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
 
             <!-- 4.3 TEMPORIZAÇÃO (RC) -->
             <article id="doc-temporizacao" class="doc-content hidden">
-                <div class="document">
+                <div class="document card">
                     <h2>4.3 Circuitos de Temporização (Constante de Tempo RC)</h2>
                     <p>A constante de tempo (representada por Tau - <strong>τ</strong>) define a taxa de carga e descarga de um capacitor através de um resistor num circuito elétrico.</p>
 
@@ -239,10 +231,10 @@
 
                     <p>Um capacitor demora cerca de <strong>5τ</strong> para atingir a sua carga ou descarga completa (aprox. 99,3%). Esse princípio é largamente utilizado na criação de temporizadores e geradores de pulso.</p>
                 </div>
-                <section class="html-upload">
-                    <p class="nav-title">Adicionar documento HTML</p>
-                    <label class="input-label" for="arquivo-temporizacao">Escolher arquivo (.html ou .htm):</label>
-                    <input class="file-input html-file-input" type="file" id="arquivo-temporizacao" accept=".html,.htm,text/html">
+                <section class="html-upload card form-group">
+                    <p class="form-help">Adicionar documento HTML</p>
+                    <label class="form-label" for="arquivo-temporizacao">Escolher arquivo (.html ou .htm):</label>
+                    <input class="form-control html-file-input" type="file" id="arquivo-temporizacao" accept=".html,.htm,text/html">
                     <div class="html-preview"></div>
                 </section>
             </article>
@@ -250,8 +242,10 @@
         </main>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2026 Portal Educação. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Portal Educação. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>

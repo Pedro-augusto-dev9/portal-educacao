@@ -2,7 +2,16 @@ const links = document.querySelectorAll('.doc-link');
 const contents = document.querySelectorAll('.doc-content');
 
 function setActiveDocument(targetId) {
-  links.forEach((item) => item.classList.toggle('active', item.dataset.doc === targetId));
+  links.forEach((item) => {
+    const isActive = item.dataset.doc === targetId;
+    item.classList.toggle('active', isActive);
+
+    if (isActive) {
+      item.setAttribute('aria-current', 'page');
+    } else {
+      item.removeAttribute('aria-current');
+    }
+  });
 
   contents.forEach((content) => {
     const isActive = content.id === targetId;
