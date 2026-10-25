@@ -87,3 +87,30 @@ verifyButton.addEventListener('click', () => {
   resultText.textContent = `Você acertou ${hits} de ${quizData.length} questões.`;
   resultText.style.color = hits >= 2 ? '#0a7a3a' : '#a11313';
 });
+
+document.getElementById('wordFile').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            
+            if (!file) return;
+
+            const container = document.getElementById('doc-container');
+            
+            // Avisa o usuário que está carregando
+            container.innerHTML = '<p style="text-align: center;">Carregando documento...</p>';
+
+            // Lendo o arquivo enviado como ArrayBuffer
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const arrayBuffer = e.target.result;
+
+                // Renderiza o arquivo Word dentro do container
+                docx.renderAsync(arrayBuffer, container)
+                    .then(x => console.log("Documento renderizado com sucesso!"))
+                    .catch(err => {
+                        console.error(err);
+                        container.innerHTML = '<p style="color: red; text-align: center;">Erro ao abrir o documento.</p>';
+                    });
+            };
+            
+            reader.readAsArrayBuffer(file);
+        });
