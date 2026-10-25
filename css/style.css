@@ -226,22 +226,38 @@ body {
     }
 }
 
-    #doc-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
     .display {
         display: block;
         margin-bottom: 10px;
         font-weight: bold;
     }
 
+    .html-upload {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        padding: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .html-upload .nav-title,
+    .html-upload .input-label {
+        margin: 0;
+    }
+
+    .html-preview iframe {
+        display: block;
+        width: 100%;
+        min-height: 600px;
+        border: 1px solid #ccc;
+        background: white;
+    }
+
     .input-label {
         display: block;
-        margin-bottom: 10px;
         font-weight: bold;
         margin-left: 25px;
     }
