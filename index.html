@@ -182,10 +182,58 @@
                 <div class="document quiz-sheet card">
                     <h2>3.3 Quiz Interativo</h2>
                     <p>Teste os seus conhecimentos sobre as leis de circuitos e componentes eletrónicos abaixo:</p>
-                    <div id="quiz"></div>
+                    
+                    <div id="quiz">
+                        <!-- Questão 1 -->
+                        <div class="quiz-question">
+                            <h4>1. Qual lei afirma que a soma das correntes que entram em um nó é igual à soma das correntes que saem?</h4>
+                            <label><input type="radio" name="q-0" value="0"> Lei de Ohm</label>
+                            <label><input type="radio" name="q-0" value="1"> Lei das Correntes de Kirchhoff</label>
+                            <label><input type="radio" name="q-0" value="2"> Lei das Tensões de Kirchhoff</label>
+                            <label><input type="radio" name="q-0" value="3"> Lei da Conservação de Energia</label>
+                        </div>
+
+                        <!-- Questão 2 -->
+                        <div class="quiz-question">
+                            <h4>2. Em uma malha fechada, qual é o valor da soma algébrica das tensões?</h4>
+                            <label><input type="radio" name="q-1" value="0"> Igual à corrente total</label>
+                            <label><input type="radio" name="q-1" value="1"> Maior que zero</label>
+                            <label><input type="radio" name="q-1" value="2"> Igual a zero</label>
+                            <label><input type="radio" name="q-1" value="3"> Igual à potência</label>
+                        </div>
+
+                        <!-- Questão 3 -->
+                        <div class="quiz-question">
+                            <h4>3. Quem formulou as leis que levam o nome de Kirchhoff?</h4>
+                            <label><input type="radio" name="q-2" value="0"> Gustav Robert Kirchhoff</label>
+                            <label><input type="radio" name="q-2" value="1"> Isaac Newton</label>
+                            <label><input type="radio" name="q-2" value="2"> James Clerk Maxwell</label>
+                            <label><input type="radio" name="q-2" value="3"> Nikola Tesla</label>
+                        </div>
+
+                        <!-- Questão 4 -->
+                        <div class="quiz-question">
+                            <h4>4. A soma das correntes que entram em um nó é igual à soma das correntes que saem. Isso está relacionado à:</h4>
+                            <label><input type="radio" name="q-3" value="0"> Lei da Conservação de Energia</label>
+                            <label><input type="radio" name="q-3" value="1"> Lei das Correntes de Kirchhoff</label>
+                            <label><input type="radio" name="q-3" value="2"> Lei das Tensões de Kirchhoff</label>
+                            <label><input type="radio" name="q-3" value="3"> Lei de Ohm</label>
+                        </div>
+
+                        <!-- Questão 5 -->
+                        <div class="quiz-question">
+                            <h4>5. Em uma malha fechada, a soma algébrica das tensões é:</h4>
+                            <label><input type="radio" name="q-4" value="0"> Maior que zero</label>
+                            <label><input type="radio" name="q-4" value="1"> Igual a zero</label>
+                            <label><input type="radio" name="q-4" value="2"> Menor que zero</label>
+                            <label><input type="radio" name="q-4" value="3"> Igual à corrente total</label>
+                        </div>
+                    </div>
+
                     <button id="btn-verificar" class="button" type="button">Verificar respostas</button>
                     <p id="quiz-resultado" class="quiz-result"></p>
                 </div>
+
                 <section class="html-upload card form-group">
                     <p class="form-help">Adicionar documento HTML</p>
                     <label class="form-label" for="arquivo-quiz">Escolher arquivo (.html ou .htm):</label>
