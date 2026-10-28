@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho de Portal Educação - Lei de Kirchhoff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #003366;
+        }
+        h1 {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .formula {
+            background-color: #eef2f7;
+            padding: 10px 15px;
+            border-left: 4px solid #003366;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .visual-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .visual-box {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 15px;
+            background-color: #fff;
+            text-align: center;
+            flex: 1 1 250px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .resumo-box {
+            background-color: #fffde7;
+            border: 1px solid #fff59d;
+            padding: 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <p><strong>TRABALHO DE PORTAL EDUCAÇÃO</strong></p>
+        <h1>Lei de Kirchhoff</h1>
+    </header>
+
+    <section class="section">
+        <h2>Introdução</h2>
+        <p>As Leis de Kirchhoff são os pilares fundamentais da eletroeletrônica e da engenharia elétrica. Desenvolvidas pelo físico alemão Gustav Robert Kirchhoff em 1845, essas regras permitem analisar e resolver circuitos complexos que vão muito além da capacidade de simplificação da Lei de Ohm isolada. Entender esses conceitos é indispensável para desenhar desde redes de distribuição de energia elétrica residenciais até os circuitos integrados microscópicos presentes em smartphones e computadores. Sem essas leis, o desenvolvimento, a otimização e a manutenção de qualquer dispositivo eletroeletrônico moderno seriam impossíveis.</p>
+    </section>
+
+    <section class="section">
+        <h2>Conteúdo Técnico</h2>
+        <p><strong>1ª Lei de Kirchhoff – Lei das Correntes de Kirchhoff (LCK):</strong> Esta regra baseia-se diretamente no princípio físico da conservação da carga elétrica. Ela determina que a soma algébrica das correntes elétricas que entram em um nó deve ser exatamente igual à soma das correntes que dele saem. Matematicamente, a soma total das correntes em um nó é nula, indicando que nenhuma carga elétrica pode ser retida ou criada acumulada nesses pontos de junção.</p>
+        
+        <p><strong>2ª Lei de Kirchhoff – Lei das Tensões de Kirchhoff (LKT):</strong> Esta regra baseia-se no princípio da conservação da energia em um campo elétrico conservativo. Ela estabelece que a soma algébrica de todas as diferenças de potencial (tensões) ao longo de qualquer malha fechada em um circuito é igual a zero. Isso significa que toda a energia fornecida pelas fontes geradoras de tensão é integralmente consumida pelas quedas de potencial nos resistores e demais receptores daquele mesmo caminho fechado.</p>
+    </section>
+
+    <section class="section">
+        <h2>Exemplos práticos</h2>
+        <ul>
+            <li><strong>Instalações Residenciais (LCK):</strong> Ao ligar simultaneamente um chuveiro elétrico e uma lâmpada no mesmo circuito principal da casa, a corrente total que entra pelo disjuntor geral se divide exatamente de forma proporcional entre os ramos de cada eletrodoméstico, garantindo que a corrente que retorna pelo fio neutro mantenha a conservação do sistema.</li>
+            <li><strong>Sistemas de Iluminação em Série (LKT):</strong> Em lâmpadas decorativas de LED ligadas em série (como pisca-piscas), a tensão total fornecida pela tomada da parede (ex: 127V) se divide igualmente ou proporcionalmente entre cada uma das pequenas lâmpadas. Se medirmos a queda de tensão de cada lâmpada individual e somarmos todas, o valor total corresponderá exatamente à tensão de entrada da tomada.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Recursos visuais</h2>
+        <div class="visual-container">
+            <div class="visual-box">
+                <p><strong>Lei das Correntes (Nó)</strong></p>
+                <svg width="200" height="160" viewBox="0 0 200 160">
+                    <path d="M 20 130 Q 60 100 100 80" stroke="#dc2626" stroke-width="3" fill="none"/>
+                    <path d="M 100 80 Q 140 60 180 20" stroke="#16a34a" stroke-width="3" fill="none"/>
+                    <path d="M 130 140 Q 115 110 100 80" stroke="#2563eb" stroke-width="3" fill="none"/>
+                    <circle cx="100" cy="80" r="6" fill="#ea580c"/>
+                    <text x="110" y="85" fill="#ea580c" font-weight="bold">nó</text>
+                    <text x="50" y="90" fill="#dc2626">i₁</text>
+                    <text x="150" y="60" fill="#16a34a">i₂</text>
+                    <text x="125" y="125" fill="#2563eb">i₃</text>
+                </svg>
+            </div>
+            <div class="visual-box">
+                <p><strong>Lei das Tensões (Malha)</strong></p>
+                <svg width="220" height="160" viewBox="0 0 220 160">
+                    <rect x="20" y="20" width="180" height="120" fill="none" stroke="#000" stroke-width="2"/>
+                    <line x1="110" y1="20" x2="110" y2="140" stroke="#000" stroke-width="2"/>
+                    <text x="25" y="80" font-size="12">20 V</text>
+                    <rect x="105" y="60" width="10" height="30" fill="#fff" stroke="#000"/>
+                    <text x="120" y="80" font-size="12">4 Ω</text>
+                    <rect x="195" y="60" width="10" height="30" fill="#fff" stroke="#000"/>
+                    <text x="170" y="80" font-size="12">1 Ω</text>
+                    <rect x="50" y="135" width="30" height="10" fill="#fff" stroke="#000"/>
+                    <text x="55" y="130" font-size="12">1 Ω</text>
+                    <text x="170" y="120" font-size="12">7 V</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Curiosidades e aplicações</h2>
+        <p><strong>O Coração dos Softwares de Simulação:</strong> Softwares mundialmente utilizados por engenheiros para testar circuitos antes de sua fabricação real, como o Proteus, LTspice e Multisim, realizam bilhões de cálculos matriciais baseados puramente nas equações das Leis de Kirchhoff.</p>
+        <p><strong>A Origem dos Circuitos Impressos:</strong> Kirchhoff desenvolveu essas leis quando tinha apenas 21 anos de idade, ainda como um estudante universitário na Universidade de Königsberg, provando que grandes contribuições científicas podem surgir logo no início da carreira acadêmica.</p>
+    </section>
+
+    <section class="section resumo-box">
+        <h2>Resumo para caderno</h2>
+        <p><strong>Leis de Kirchhoff (1845):</strong> Ferramentas para analisar circuitos elétricos complexos.</p>
+        <p><strong>Conceitos Chave:</strong> Nó (encontro de condutores), Ramo (caminho entre nós) e Malha (percurso fechado).</p>
+        <ul>
+            <li><strong>Nó:</strong> É qualquer ponto de encontro onde três ou mais fios (condutores) se conectam em um circuito. Imagine como um cruzamento de avenidas: a corrente elétrica chega por um caminho e se divide entre as outras direções disponíveis.</li>
+            <li><strong>Ramo:</strong> É o caminho ou trecho do circuito localizado entre dois nós consecutivos. Em um ramo, encontramos os componentes (como resistores ou fontes), e a corrente elétrica que passa por ele é exatamente a mesma em toda a sua extensão.</li>
+            <li><strong>Malha:</strong> É qualquer caminho fechado que você possa percorrer no circuito. Para ser uma malha, você deve começar a caminhar em um nó, passar pelos componentes e retornar exatamente ao mesmo nó de partida, sem passar pelo mesmo ponto duas vezes.</li>
+        </ul>
+        
+        <p><strong>1ª Lei (Lei dos Nós / LCK):</strong> Conservação da Carga. A soma das correntes que entram em um nó é igual à soma das correntes que saem.</p>
+        <div class="formula">∑ I<sub>entra</sub> = ∑ I<sub>sai</sub></div>
+
+        <p><strong>2ª Lei (Lei das Malhas / LKT):</strong> Conservação da Energia. A soma de todas as tensões e quedas de potencial ao longo de uma malha fechada é sempre igual a zero.</p>
+        <div class="formula">∑ V = 0</div>
+    </section>
+</div>
+
+</body>
+</html>
