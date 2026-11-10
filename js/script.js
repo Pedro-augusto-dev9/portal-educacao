@@ -2,29 +2,25 @@
 const links = document.querySelectorAll('.doc-link');
 const contents = document.querySelectorAll('.doc-content');
 
-function setActiveDocument(targetId) {
-  links.forEach((item) => {
-    const isActive = item.dataset.doc === targetId;
-    item.classList.toggle('active', isActive);
-
-    if (isActive) {
-      item.setAttribute('aria-current', 'page');
-    } else {
-      item.removeAttribute('aria-current');
-    }
-  });
-
-  contents.forEach((content) => {
-    const isActive = content.id === targetId;
-    content.classList.toggle('active', isActive);
-    content.classList.toggle('hidden', !isActive);
-  });
-}
-
 links.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    setActiveDocument(link.dataset.doc);
+
+    const targetId = link.dataset.doc;
+
+    links.forEach((item) => {
+      const isActive = item.dataset.doc === targetId;
+      item.classList.toggle('active', isActive);
+      isActive
+        ? item.setAttribute('aria-current', 'page')
+        : item.removeAttribute('aria-current');
+    });
+
+    contents.forEach((content) => {
+      const isActive = content.id === targetId;
+      content.classList.toggle('active', isActive);
+      content.classList.toggle('hidden', !isActive);
+    });
   });
 });
 
