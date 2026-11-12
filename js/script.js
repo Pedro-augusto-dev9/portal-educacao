@@ -1,6 +1,6 @@
 // Navegaçao das Abas
-const links = document.querySelectorAll('.doc-link');
-const contents = document.querySelectorAll('.doc-content');
+const links = document.querySelectorAll('.link-documento');
+const contents = document.querySelectorAll('.conteudo-documento');
 
 links.forEach((link) => {
   link.addEventListener('click', (event) => {
@@ -19,7 +19,7 @@ links.forEach((link) => {
     contents.forEach((content) => {
       const isActive = content.id === targetId;
       content.classList.toggle('active', isActive);
-      content.classList.toggle('hidden', !isActive);
+      content.classList.toggle('oculto', !isActive);
     });
   });
 });
@@ -45,9 +45,9 @@ verifyButton.addEventListener('click', () => {
 });
 
 // Leitor de Upload de Arquivos HTML
-document.querySelectorAll('.html-file-input').forEach((fileInput) => {
-  const uploadSection = fileInput.closest('.html-upload');
-  const previewContainer = uploadSection.querySelector('.html-preview');
+document.querySelectorAll('.entrada-arquivo-html').forEach((fileInput) => {
+  const uploadSection = fileInput.closest('.upload-html');
+  const previewContainer = uploadSection.querySelector('.previsao-html');
 
   fileInput.addEventListener('change', () => {
     const file = fileInput.files[0];
