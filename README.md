@@ -37,12 +37,12 @@ JavaScript (Vanilla): Manipulação do DOM para alternância de módulos e dinam
 #Estrutura do Projeto
 
 portal-educacao/
-├── assets/          # Imagens, ícones e recursos visuais
-├── css/             # Arquivos de estilização (style.css)
-├── docs/            # Documentações e arquivos auxiliares
+├── assets/          # Imagens
+├── css/             # Estilização (style.css)
+├── docs/            # Documentações
 ├── js/              # Scripts e lógica (script.js)
 ├── modulos/         # módulos de conteúdos para download
-├── index.html       # Arquivo principal da aplicação
+├── index.html       # Arquivo principal (html)
 ├── LICENSE          # Licença do repositório
 └── README.md        # Documentação do projeto
 
@@ -54,10 +54,8 @@ Clone o repositório: git clone https://github.com/Pedro-augusto-dev9/portal-edu
 
 Acesse a pasta do projeto: cd portal-educacao
 
-Execute no navegador: Basta dar um duplo clique no arquivo index.html ou
-
 Utilizar a extensão Live Server no VS Code para rodar em um servidor local.
 
 #Licença
 
-Este projeto está sob a licença descrita no arquivo LICENSE.
+Este projeto está com a licença descrita no arquivo LICENSE.
