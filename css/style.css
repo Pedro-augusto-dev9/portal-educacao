@@ -2,14 +2,14 @@
   color-scheme: light;
 
   /* Cores */
-  --color-primary: #1769aa;
-  --color-primary-hover: #12558a;
-  --color-secondary: #475569;
-  --color-accent: #0f766e;
+  --color-primary: #919635dd;
+  --color-primary-hover: #ffe100be;
+  --color-secondary: #b2ad11;
+  --color-accent: #76680f;
   --color-background: #f5f7fb;
   --color-surface: #ffffff;
   --color-text: #172033;
-  --color-text-muted: #5b6475;
+  --color-text-muted: #75745bdb;
   --color-border: #d9e0ea;
   --color-success: #18794e;
   --color-warning: #946200;
@@ -54,7 +54,6 @@
 html {
   scroll-behavior: smooth;
   text-size-adjust: 100%;
-  
 }
 
 body {
@@ -102,32 +101,28 @@ a:hover {
   color: var(--color-primary-hover);
 }
 
-h1,
-h2,
-h3,
-h4,
 p {
   margin-top: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.titulo-site,
+.documento h2,
+.titulo-modulos,
+.pergunta-quiz h4 {
+  margin-top: 0;
   line-height: 1.25;
 }
 
-/*mudei a cor para BRANCO*/
-h1 {
+.titulo-site {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  color: rgb(229, 227, 227)
+  color: rgb(229, 227, 227);
 }
 
-h2 {
+.documento h2 {
   font-size: clamp(1.4rem, 3vw, 1.875rem);
 }
 
-h3 {
+.titulo-modulos {
   font-size: 1.25rem;
 }
 
@@ -188,9 +183,8 @@ h3 {
    ========================================================= */
 .cabecalho-site {
   min-height: var(--header-height);
-  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
-  background: rgb(16, 16, 16)
+  background: rgb(16, 16, 16);
 }
 
 .cabecalho-interno {
@@ -200,26 +194,40 @@ h3 {
   gap: var(--space-4);
   min-height: var(--header-height);
   padding-block: var(--space-2);
-  background: rgb(16, 16, 16)
+  background: rgb(16, 16, 16);
+}
+
+.logo-site {
+  width: 4rem;
+  height: auto;
 }
 
 .navegacao-site {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: var(--space-2);
 }
 
-.navegacao-site a {
-  display: inline-block;
+.link-documento {
+  display: block;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
   text-decoration: none;
 }
 
-.navegacao-site a:hover,
-.navegacao-site a[aria-current="page"] {
+.link-documento:hover,
+.link-documento.active {
   background: var(--color-background);
   color: var(--color-primary-hover);
+}
+
+.titulo-navegacao {
+  margin: var(--space-4) 0 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.titulo-navegacao:first-child {
+  margin-top: 0;
 }
 
 .rodape-site {
@@ -229,8 +237,12 @@ h3 {
   font-size: var(--font-size-sm);
 }
 
+.texto-rodape {
+  margin-bottom: var(--space-4);
+}
+
 /* =========================================================
-   5. Componentes: cartões, botões e etiquetas
+   5. Conteúdo e cartões
    ========================================================= */
 .cartao {
   padding: var(--space-6);
@@ -238,6 +250,10 @@ h3 {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
+}
+
+.documento {
+  margin-bottom: var(--space-4);
 }
 
 .botao {
@@ -275,6 +291,18 @@ h3 {
   display: grid;
   gap: var(--space-2);
   margin-bottom: var(--space-4);
+}
+
+.previsao-html {
+  margin-top: var(--space-2);
+}
+
+.previsao-html iframe {
+  width: 100%;
+  min-height: 500px;
+  border: 2px inset;
+  border-radius: 4px;
+  padding: 0;
 }
 
 .rotulo-formulario {
@@ -318,7 +346,7 @@ textarea.campo-formulario {
 }
 
 /* =========================================================
-   9. Responsividade
+   8. Responsividade
    ========================================================= */
 @media (max-width: 768px) {
   .cabecalho-interno {
@@ -344,27 +372,4 @@ textarea.campo-formulario {
   .cartao {
     padding: var(--space-4);
   }
-}
-
-.titulo-navegacao {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  margin-bottom: var(--space-2);
-}
-
-.previsao-html {
-    padding: 0;
-}
-
-iframe {
-    width: 100%;
-    min-height: 500px;
-    border: 2px;
-    border-radius: 4px; 
-    padding: 0;
-}
-
-html {
-    padding: 0;
-    display: block;
 }
